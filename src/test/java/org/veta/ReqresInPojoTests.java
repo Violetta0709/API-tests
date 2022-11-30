@@ -1,10 +1,13 @@
 package org.veta;
 
+import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import models.pojo.*;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import static helpers.CustomApiListener.withCustomTemplates;
 import static io.restassured.RestAssured.given;
 import static io.restassured.http.ContentType.JSON;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
@@ -24,6 +27,7 @@ public class ReqresInPojoTests {
         body.setJob("leader");
 
         UserCreationResponseModel response = given()
+                .filter(withCustomTemplates())
                 .log().all()
                 .contentType(JSON)
                 .body(body)
@@ -48,6 +52,7 @@ public class ReqresInPojoTests {
         body.setEmail("eve.holt@reqres.in");
         body.setPassword("pistol");
         SuccessfullRegistartionResponseModel response = given()
+                .filter(withCustomTemplates())
                 .log().all()
                 .contentType(JSON)
                 .body(body)
@@ -68,6 +73,7 @@ public class ReqresInPojoTests {
         UnsuccessfullRegistrationBodyModel body = new UnsuccessfullRegistrationBodyModel();
         body.setEmail("veta@fife");
         UnsuccessfullRegistrationResponseModel response = given()
+                .filter(withCustomTemplates())
                 .log().all()
                 .contentType(JSON)
                 .body(body)
@@ -88,6 +94,7 @@ public class ReqresInPojoTests {
         body.setJob("zion president");
         body.setName("morpheus");
         UserUpdtateLombokResponseModel response = given()
+                .filter(withCustomTemplates())
                 .log().all()
                 .contentType(JSON)
                 .body(body)
@@ -109,6 +116,7 @@ public class ReqresInPojoTests {
         LoginUnsuccessfullBodyModel body = new LoginUnsuccessfullBodyModel();
         body.setEmail("peter@klaven");
         LoginUnsiccessfullResponseModel response = given()
+                .filter(withCustomTemplates())
                 .log().all()
                 .contentType(JSON)
                 .body(body)

@@ -1,5 +1,6 @@
 package org.veta;
 
+import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import models.lombok.*;
 import models.lombok.UserUpdateLombokBodyModel;
@@ -8,6 +9,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static helpers.CustomApiListener.withCustomTemplates;
 import static io.restassured.RestAssured.given;
 import static io.restassured.http.ContentType.JSON;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
@@ -27,6 +29,7 @@ public class ReqresInLombokTests {
         body.setJob("leader");
 
         UserCreationResponseLombokModel response = given()
+                .filter(withCustomTemplates())
                 .log().all()
                 .contentType(JSON)
                 .body(body)
@@ -51,6 +54,7 @@ public class ReqresInLombokTests {
         body.setEmail("eve.holt@reqres.in");
         body.setPassword("pistol");
         SuccessfullRegistartionLombokResponseModel response = given()
+                .filter(withCustomTemplates())
                 .log().all()
                 .contentType(JSON)
                 .body(body)
@@ -71,6 +75,7 @@ public class ReqresInLombokTests {
         UnsuccessfullRegistrationLombokBodyModel body = new UnsuccessfullRegistrationLombokBodyModel();
         body.setEmail("veta@fife");
         UnsuccessfullRegistrationLombokResponseModel response = given()
+                .filter(withCustomTemplates())
                 .log().all()
                 .contentType(JSON)
                 .body(body)
@@ -91,6 +96,7 @@ public class ReqresInLombokTests {
         body.setJob("zion president");
         body.setName("morpheus");
         UserUpdtateLombokResponseModel response = given()
+                .filter(withCustomTemplates())
                 .log().all()
                 .contentType(JSON)
                 .body(body)
@@ -112,6 +118,7 @@ public class ReqresInLombokTests {
         LoginUnsuccessfullLombokBodyModel body = new LoginUnsuccessfullLombokBodyModel();
         body.setEmail("peter@klaven");
         LoginUnsiccessfullLombokResponseModel response = given()
+                .filter(withCustomTemplates())
                 .log().all()
                 .contentType(JSON)
                 .body(body)
