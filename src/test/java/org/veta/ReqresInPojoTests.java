@@ -1,6 +1,7 @@
 package org.veta;
 
 import com.codeborne.selenide.Configuration;
+import io.restassured.RestAssured;
 import models.pojo.*;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
@@ -15,7 +16,7 @@ public class ReqresInPojoTests {
 
     @BeforeAll
     static void configure() {
-        Configuration.baseUrl = "https://reqres.in/api";
+        RestAssured.baseURI = "https://reqres.in/api";
     }
 
     @Test
@@ -30,7 +31,7 @@ public class ReqresInPojoTests {
                 .contentType(JSON)
                 .body(body)
                 .when()
-                .post("https://reqres.in/api/users")
+                .post("/users")
                 .then()
                 .log().status()
                 .log().body()
@@ -54,7 +55,7 @@ public class ReqresInPojoTests {
                 .contentType(JSON)
                 .body(body)
                 .when()
-                .post("https://reqres.in/api/register")
+                .post("/register")
                 .then()
                 .log().status()
                 .log().body()
@@ -74,7 +75,7 @@ public class ReqresInPojoTests {
                 .contentType(JSON)
                 .body(body)
                 .when()
-                .post("https://reqres.in/api/register")
+                .post("/register")
                 .then()
                 .log().status()
                 .log().body()
@@ -94,7 +95,7 @@ public class ReqresInPojoTests {
                 .contentType(JSON)
                 .body(body)
                 .when()
-                .patch("https://reqres.in/api/users/2")
+                .patch("/users/2")
                 .then()
                 .log().status()
                 .log().body()
@@ -115,7 +116,7 @@ public class ReqresInPojoTests {
                 .contentType(JSON)
                 .body(body)
                 .when()
-                .post("https://reqres.in/api/login")
+                .post("/login")
                 .then()
                 .log().status()
                 .log().body()
