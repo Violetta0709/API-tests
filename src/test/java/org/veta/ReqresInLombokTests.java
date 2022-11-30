@@ -1,102 +1,128 @@
 package org.veta;
 
-import lombok.Data;
+import io.restassured.RestAssured;
+import models.lombok.*;
+import models.lombok.UserUpdateLombokBodyModel;
+import models.pojo.*;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.http.ContentType.JSON;
-import static org.hamcrest.Matchers.is;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class ReqresInLombokTests {
+
+    @BeforeAll
+    static void configure() {
+        RestAssured.baseURI = "https://reqres.in/api";
+    }
 
     @Test
     @DisplayName("User creation")
     void createUser() {
-        String data = "{\"name\":\"morpheus\",\"job\":\"leader\"}";
+        UserCreationLombokBodyModel body = new UserCreationLombokBodyModel();
+        body.setName("morpheus");
+        body.setJob("leader");
 
-        given()
-                .log().uri()
+        UserCreationResponseLombokModel response = given()
+                .log().all()
                 .contentType(JSON)
-                .body(data)
+                .body(body)
                 .when()
-                .post("https://reqres.in/api/users")
+                .post("/users")
                 .then()
                 .log().status()
                 .log().body()
                 .statusCode(201)
-                .body("name", is("morpheus"), "job", is("leader"));
+                .extract().as(UserCreationResponseLombokModel.class);
+        assertThat(response.getJob()).isEqualTo("leader");
+        assertThat(response.getName()).isEqualTo("morpheus");
+        assertThat(response.getCreatedAt()).isNotNull();
+        assertThat(response.getId()).isNotNull();
+
     }
 
     @Test
     @DisplayName("Successful registration")
     void userRegister() {
-        String data = "{\"email\": \"eve.holt@reqres.in\", \"password\": \"pistol\" }";
-
-        given()
-                .log().uri()
+        SuccessfullRegistrationLombokBodyModel body = new SuccessfullRegistrationLombokBodyModel();
+        body.setEmail("eve.holt@reqres.in");
+        body.setPassword("pistol");
+        SuccessfullRegistartionLombokResponseModel response = given()
+                .log().all()
                 .contentType(JSON)
-                .body(data)
+                .body(body)
                 .when()
-                .post("https://reqres.in/api/register")
+                .post("/register")
                 .then()
                 .log().status()
                 .log().body()
                 .statusCode(200)
-                .body("token", is("QpwL5tke4Pnpja7X4"));
+                .extract().as(SuccessfullRegistartionLombokResponseModel.class);
+        assertThat(response.getToken()).isNotNull();
+        assertThat(response.getId()).isNotNull();
     }
 
     @Test
     @DisplayName("Unsuccessful registration")
     void trytoRegister() {
-        String data = "{\"email\":\"veta@fife\"}";
-
-        given()
-                .log().uri()
+        UnsuccessfullRegistrationLombokBodyModel body = new UnsuccessfullRegistrationLombokBodyModel();
+        body.setEmail("veta@fife");
+        UnsuccessfullRegistrationLombokResponseModel response = given()
+                .log().all()
                 .contentType(JSON)
-                .body(data)
+                .body(body)
                 .when()
-                .post("https://reqres.in/api/register")
+                .post("/register")
                 .then()
                 .log().status()
                 .log().body()
                 .statusCode(400)
-                .body("error", is("Missing password"));
+                .extract().as(UnsuccessfullRegistrationLombokResponseModel.class);
+        assertThat(response.getError()).isEqualTo("Missing password");
     }
 
     @Test
     @DisplayName("User information update")
     void updateInfo() {
-        String data = "{\"name\":\"morpheus\",\"job\":\"zion president\"}";
-        given()
-                .log().uri()
+        UserUpdateLombokBodyModel body = new UserUpdateLombokBodyModel();
+        body.setJob("zion president");
+        body.setName("morpheus");
+        UserUpdtateLombokResponseModel response = given()
+                .log().all()
                 .contentType(JSON)
-                .body(data)
+                .body(body)
                 .when()
-                .patch("https://reqres.in/api/users/2")
+                .patch("/users/2")
                 .then()
                 .log().status()
                 .log().body()
                 .statusCode(200)
-                .body("name", is("morpheus"), "job", is("zion president"));
+                .extract().as(UserUpdtateLombokResponseModel.class);
+        assertThat(response.getJob()).isEqualTo("zion president");
+        assertThat(response.getName()).isEqualTo("morpheus");
+        assertThat(response.getUpdatedAt()).isNotNull();
     }
 
     @Test
     @DisplayName("Login unsuccessful")
     void tryLogin() {
-        String data = "{\"email\":\"peter@klaven\"}";
-        given()
-                .log().uri()
+        LoginUnsuccessfullLombokBodyModel body = new LoginUnsuccessfullLombokBodyModel();
+        body.setEmail("peter@klaven");
+        LoginUnsiccessfullLombokResponseModel response = given()
+                .log().all()
                 .contentType(JSON)
-                .body(data)
+                .body(body)
                 .when()
-                .post("https://reqres.in/api/login")
+                .post("/login")
                 .then()
                 .log().status()
                 .log().body()
                 .statusCode(400)
-                .body("error", is("Missing password"));
+                .extract().as(LoginUnsiccessfullLombokResponseModel.class);
+        assertThat(response.getError()).isEqualTo("Missing password");
     }
-
 }
 

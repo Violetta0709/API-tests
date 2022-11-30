@@ -1,15 +1,12 @@
 package org.veta;
 
-import com.codeborne.selenide.Configuration;
 import io.restassured.RestAssured;
 import models.pojo.*;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
 import static io.restassured.RestAssured.given;
 import static io.restassured.http.ContentType.JSON;
-import static java.nio.channels.SocketChannel.open;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class ReqresInPojoTests {
@@ -87,10 +84,10 @@ public class ReqresInPojoTests {
     @Test
     @DisplayName("User information update")
     void updateInfo() {
-        UserUpdateBodyModel body = new UserUpdateBodyModel();
+        UserUpdateLombokBodyModel body = new UserUpdateLombokBodyModel();
         body.setJob("zion president");
         body.setName("morpheus");
-        UserUpdtateResponseModel response = given()
+        UserUpdtateLombokResponseModel response = given()
                 .log().all()
                 .contentType(JSON)
                 .body(body)
@@ -100,7 +97,7 @@ public class ReqresInPojoTests {
                 .log().status()
                 .log().body()
                 .statusCode(200)
-                .extract().as(UserUpdtateResponseModel.class);
+                .extract().as(UserUpdtateLombokResponseModel.class);
         assertThat(response.getJob()).isEqualTo("zion president");
         assertThat(response.getName()).isEqualTo("morpheus");
         assertThat(response.getUpdatedAt()).isNotNull();

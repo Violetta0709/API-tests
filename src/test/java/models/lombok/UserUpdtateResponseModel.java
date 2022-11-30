@@ -1,4 +1,4 @@
-package models.pojo;
+package models.lombok;
 
 public class UserUpdtateResponseModel {
     private String name;
