@@ -1,6 +1,6 @@
 package org.veta;
 
-import org.junit.jupiter.api.BeforeAll;
+import lombok.Data;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -8,7 +8,7 @@ import static io.restassured.RestAssured.given;
 import static io.restassured.http.ContentType.JSON;
 import static org.hamcrest.Matchers.is;
 
-public class ReqresInTests {
+public class ReqresInLombokTests {
 
     @Test
     @DisplayName("User creation")
