@@ -39,7 +39,7 @@
 gradle clean test
 ```
 
-## <img width="4%" title="Jenkins" src="images/Jenkins.svg"> Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/Rest%20API/)
+## <img width="4%" title="Jenkins" src="images/Jenkins.svg"> Test run with [Jenkins](https://jenkins.autotests.cloud/job/Rest%20API/)
 
 For test run need to click on button <code><strong>*Собрать*</strong></code>.
 
@@ -50,14 +50,14 @@ For test run need to click on button <code><strong>*Собрать*</strong></co
 After test run block <code><strong>*История сборок*</strong></code> opposite run number logo
 *Allure Report* should appear, after click on it, page with html-report will be opened.
 
-## <img width="4%" title="Allure Report" src="images/Allure.jpg"> Report with tests result with [Allure Report](https://jenkins.autotests.cloud/job/tmaksyutov_diplom_api/allure/)
+## <img width="4%" title="Allure Report" src="images/Allure.svg"> Report with tests result with [Allure Report](https://jenkins.autotests.cloud/job/Rest%20API/allure/#suites/446f8008c5078c4d93dc274e5355d108)
 
 <p align="left">
-  <img src="images/screenshot/allure-report1.png" alt="allure-report1" width="900">
+  <img src="images/Allure.jpg" alt="allure-report1" width="800">
 </p>
 
 <p align="left">
-  <img src="images/screenshot/allure-report.png" alt="allure-report" width="900">
+  <img src="images/Allurereport.jpg" alt="allure-report" width="800">
 </p>
 
 
