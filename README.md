@@ -8,5 +8,5 @@
 - [Tests launch with Jenkins](#-запуск-тестов-в-jenkins)
 - [Tests result report with Allure Report](#-отчет-о-результатах-тестирования-в-Allure-report)
 
-## :technologist: Tools and technologies
+## Tools and technologies
 <p  align="center">
