@@ -57,7 +57,7 @@ After test run block <code><strong>*История сборок*</strong></code>
 </p>
 
 <p align="left">
-  <img src="images/Allurereport.jpg" alt="allure-report" width="800">
+  <img src="images/Allure2.jpg" alt="allure-report" width="800">
 </p>
 
 
