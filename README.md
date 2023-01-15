@@ -11,15 +11,15 @@
 ## Tools and technologies
 <p  align="center">
 
-<code><img width="5%" title="IntelliJ IDEA" src="images/logo/Idea.svg"></code>
-<code><img width="5%" title="Java" src="images/logo/Java.svg"></code>
-<code><img width="5%" title="Selenoid" src="images/logo/RestAssured.svg"></code>
-<code><img width="5%" title="Gradle" src="images/logo/Gradle.svg"></code>
-<code><img width="5%" title="Junit5" src="images/logo/Junit5.svg"></code>
-<code><img width="5%" title="GitHub" src="images/logo/GitHub.svg"></code>
-<code><img width="5%" title="Allure Report" src="images/logo/Allure.svg"></code>
-<code><img width="5%" title="Allure TestOps" src="images/logo/Allure_TO.svg"></code>
-<code><img width="5%" title="Jenkins" src="images/logo/Jenkins.svg"></code>
+<code><img width="5%" title="IntelliJ IDEA" src="images/Idea.svg"></code>
+<code><img width="5%" title="Java" src="images/Java.svg"></code>
+<code><img width="5%" title="Selenoid" src="images/RestAssured.svg"></code>
+<code><img width="5%" title="Gradle" src="images/Gradle.svg"></code>
+<code><img width="5%" title="Junit5" src="images/Junit5.svg"></code>
+<code><img width="5%" title="GitHub" src="images/GitHub.svg"></code>
+<code><img width="5%" title="Allure Report" src="images/Allure.svg"></code>
+<code><img width="5%" title="Allure TestOps" src="images/Allure_TO.svg"></code>
+<code><img width="5%" title="Jenkins" src="images/Jenkins.svg"></code>
 
 </p>
 
