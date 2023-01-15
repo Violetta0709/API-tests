@@ -43,7 +43,7 @@ gradle clean test
 
 For test run need to click on button <code><strong>*Собрать*</strong></code>.
 
-<p align="center">
+<p align="left">
   <img src="images/jenkins.png" alt="Jenkins" width="800">
 </p>
 
