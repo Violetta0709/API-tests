@@ -44,7 +44,7 @@ gradle clean test
 For test run need to click on button <code><strong>*Собрать*</strong></code>.
 
 <p align="center">
-  <img src="images/screenshot/jenkins.png" alt="Jenkins" width="800">
+  <img src="images/jenkins.png" alt="Jenkins" width="800">
 </p>
 
 After test run block <code><strong>*История сборок*</strong></code> opposite run number logo
