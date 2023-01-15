@@ -23,3 +23,41 @@
 
 </p>
 
+## Implemented tests with Pojo and Lombok models, Specifications:
+
+- New user creation
+- Successfull registration
+- Unsuccessfull registration
+- User information update
+- Login unsuccessfull
+
+## Test launch with ternminal
+
+### Local test launch
+
+```bash
+gradle clean test
+```
+
+## <img width="4%" title="Jenkins" src="images/Jenkins.svg"> Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/Rest%20API/)
+
+For test run need to click on button <code><strong>*Собрать*</strong></code>.
+
+<p align="center">
+  <img src="images/screenshot/jenkins.png" alt="Jenkins" width="800">
+</p>
+
+After test run block <code><strong>*История сборок*</strong></code> opposite run number logo
+*Allure Report* should appear, after click on it, page with html-report will be opened.
+
+## <img width="4%" title="Allure Report" src="images/Allure.svg"> Report with tests result with [Allure Report](https://jenkins.autotests.cloud/job/tmaksyutov_diplom_api/allure/)
+
+<p align="center">
+  <img src="images/screenshot/allure-report1.png" alt="allure-report1" width="900">
+</p>
+
+<p align="center">
+  <img src="images/screenshot/allure-report.png" alt="allure-report" width="900">
+</p>
+
+
