@@ -50,13 +50,13 @@ For test run need to click on button <code><strong>*Собрать*</strong></co
 After test run block <code><strong>*История сборок*</strong></code> opposite run number logo
 *Allure Report* should appear, after click on it, page with html-report will be opened.
 
-## <img width="4%" title="Allure Report" src="images/Allure.svg"> Report with tests result with [Allure Report](https://jenkins.autotests.cloud/job/tmaksyutov_diplom_api/allure/)
+## <img width="4%" title="Allure Report" src="images/Allure.jpg"> Report with tests result with [Allure Report](https://jenkins.autotests.cloud/job/tmaksyutov_diplom_api/allure/)
 
-<p align="center">
+<p align="left">
   <img src="images/screenshot/allure-report1.png" alt="allure-report1" width="900">
 </p>
 
-<p align="center">
+<p align="left">
   <img src="images/screenshot/allure-report.png" alt="allure-report" width="900">
 </p>
 
