@@ -41,7 +41,7 @@ gradle clean test
 
 ## <img width="4%" title="Jenkins" src="images/Jenkins.svg"> Tests run with [Jenkins](https://jenkins.autotests.cloud/job/Rest%20API/)
 
-For test run need to click on button <code><strong>*Собрать*</strong></code>.
+For test run click on button <code><strong>*Собрать*</strong></code>.
 
 <p align="left">
   <img src="images/jenkins.png" alt="Jenkins" width="800">
