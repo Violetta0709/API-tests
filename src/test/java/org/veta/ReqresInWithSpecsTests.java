@@ -5,19 +5,16 @@ import models.pojo.UserUpdtateLombokResponseModel;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static helpers.CustomApiListener.withCustomTemplates;
 import static io.restassured.RestAssured.given;
-import static io.restassured.http.ContentType.JSON;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static specs.SuccessRegRequestSpec.successRequestSpec;
+import static specs.SuccessRegResponseSpec.successResponseSpec;
 import static specs.UnsuccessLoginRequestSpec.unsuccessLoginRequestSpec;
 import static specs.UnsuccessLoginResponseSpec.unsuccessLoginResponseSpec;
 import static specs.UnsuccessRegRequestSpec.unsuccessRequestSpec;
 import static specs.UnsuccessRegResponseSpec.unsuccessResponseSpec;
-import static specs.SuccessRegRequestSpec.successRequestSpec;
-import static specs.SuccessRegResponseSpec.successResponseSpec;
 import static specs.UserCreationRequestSpecs.userCreationRequestSpec;
 import static specs.UserCreationResponseSpecs.userCreationResponseSpec;
-import static specs.UserUpdateRequestSpec.infoUpdateRequestSpec;
 import static specs.UserUpdateRequestSpec.infoUpdateRequestSpec;
 import static specs.UserUpdateResponseSpec.infoUpdateResponseSpec;
 
