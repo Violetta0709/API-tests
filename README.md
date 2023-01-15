@@ -39,7 +39,7 @@
 gradle clean test
 ```
 
-## <img width="4%" title="Jenkins" src="images/Jenkins.svg"> Test run with [Jenkins](https://jenkins.autotests.cloud/job/Rest%20API/)
+## <img width="4%" title="Jenkins" src="images/Jenkins.svg"> Tests run with [Jenkins](https://jenkins.autotests.cloud/job/Rest%20API/)
 
 For test run need to click on button <code><strong>*Собрать*</strong></code>.
 
