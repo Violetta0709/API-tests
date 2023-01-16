@@ -1,6 +1,6 @@
 # Automated API tests for [reqres.in](https://reqres.in/)
 
-##	Content
+## :white_circle:Content
 
 - [Tools and technologies](#technologist-технологии-и-инструменты)
 - [Implemented tests](#bookmark_tabs-реализованные-проверки)
@@ -8,7 +8,7 @@
 - [Tests launch with Jenkins](#-запуск-тестов-в-jenkins)
 - [Tests result report with Allure Report](#-отчет-о-результатах-тестирования-в-Allure-report)
 
-## Tools and technologies
+## :white_circle:Tools and technologies
 <p  align="center">
 
 <code><img width="5%" title="IntelliJ IDEA" src="images/Idea.svg"></code>
@@ -23,7 +23,7 @@
 
 </p>
 
-## Implemented tests with Pojo and Lombok models, Specifications:
+## :white_circle:Implemented tests with Pojo and Lombok models, Specifications:
 
 - New user creation
 - Successfull registration
@@ -39,7 +39,7 @@
 gradle clean test
 ```
 
-## <img width="4%" title="Jenkins" src="images/Jenkins.svg"> Tests run with [Jenkins](https://jenkins.autotests.cloud/job/Rest%20API/)
+## :white_circle:Tests run with [Jenkins](https://jenkins.autotests.cloud/job/Rest%20API/)
 
 For test run click on button <code><strong>*Собрать*</strong></code>.
 
@@ -50,7 +50,7 @@ For test run click on button <code><strong>*Собрать*</strong></code>.
 After test run block <code><strong>*История сборок*</strong></code> opposite run number logo
 *Allure Report* should appear, after click on it, page with html-report will be opened.
 
-## <img width="4%" title="Allure Report" src="images/Allure.svg"> Report with tests result with [Allure Report](https://jenkins.autotests.cloud/job/Rest%20API/allure/#suites/446f8008c5078c4d93dc274e5355d108)
+## :white_circle:Report with tests result with [Allure Report](https://jenkins.autotests.cloud/job/Rest%20API/allure/#suites/446f8008c5078c4d93dc274e5355d108)
 
 <p align="left">
   <img src="images/Allure.jpg" alt="allure-report1" width="800">
